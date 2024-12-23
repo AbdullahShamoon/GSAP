@@ -1,0 +1,154 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    height: 100vh;
+}
+
+
+.page0 {
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar{
+    display: flex;
+    gap: 20px;
+    height: 100px;
+    color: white;
+    font-size: 30px;
+    padding: 0px 30px;
+    /* font: bolder; */
+    /* font-weight: 200; */
+    height: 100px;
+    /* background-color: red; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_items ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    font-size: 25px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    line-height: 0px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 50%;
+    font-size: 26px;
+}
+
+.page1 {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    background-color: aqua;
+    align-items: center;
+    justify-content: end;
+}
+
+.page2 {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    background-color: rgb(0, 219, 219);
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.page3 {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    background-color: rgb(0, 170, 170);
+    justify-content: center;
+}
+
+.page4 {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(1, 82, 82);
+}
+
+.page5 {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(2, 41, 41);
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+}
+
+.box3 {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+}
+
+.text h1 {
+    color: blue;
+    font-size: 40px;
+    line-height: 50%;
+}
+
+.code {
+    font-size: 20px;
+    border-radius: 50px;
+    margin: 20px;
+    color: black;
+    background-color: rgb(245, 162, 94);
+    box-shadow: 0px 0px 5px 5px rgb(146, 72, 2);
+}
+
+.pinned_text{
+    color: white;
+    font-size: 30vw;
+    font-weight: 900;
+    white-space: nowrap;
+   
+}

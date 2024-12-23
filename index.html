@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="page0">
+            <div class="navbar">
+                <div class="logo">GSAP</div>
+                <div class="nav_items">
+                    <ul>
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Services</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <h1>GSAP</h1>
+                <h1>[GreenSock Animation Platform]</h1>
+                <h1>SCROLL TRIGGER</h1>
+                <h2>tutorial</h2>
+            </div>
+        </div>
+        <div class="page1">
+            <div class="box">GSAP</div>
+            <div class="text">
+                <h1>ABDULLAH</h1>
+                <h1>SHAMOON</h1>
+                <h1>MALLICK</h1>
+            </div>
+            <pre class="code">
+<code class="">
+    gsap.to(".box", {
+        duration: 1.5,
+        x: -450,
+        rotation: 360,
+        scale: 0.5,
+        borderRadius: "50%",
+        backgroundColor: "blue",   
+        ease: "bounce",
+        yoyo: true,
+        repeat: 1,
+        scrollTrigger: {
+            trigger: ".page1",
+            scroller: "body",
+            start: "top 40%",
+            // markers: true,
+        }
+    });
+</code>
+            </pre>
+        </div>
+        <div class="page2">
+            <h1 class="scroll">SCROLL TRIGGER</h1>
+            <div class="box2"></div>
+        </div>
+        <div class="page3">
+            <div class="box3">PIN</div>
+        </div>
+        <div class="page4">
+            <div class="pinned_text">MY NAME IS ABDULLAH SHAMOON</div>
+        </div>
+        <div class="page5"></div>
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
