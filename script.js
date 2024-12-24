@@ -198,8 +198,8 @@ page6.addEventListener("mousemove",function(event){
         x:xx,
         y:yy,
         duration:1,
-        
     })
+
     gsap.to("#cursor2",{
         x:xx,
         y:yy,
@@ -236,4 +236,68 @@ page6.addEventListener("mousemove",function(event){
         duration:0.4,
        
     })
+})
+
+var page7 = document.querySelector(".page7")
+page7.addEventListener("mousemove",function(event){
+    // Get the updated position of the element
+    var pos = page6.getBoundingClientRect();
+
+    xx=event.clientX-pos.left
+    yy=event.clientY-pos.top
+
+    gsap.to("#cursor7",{
+        x:xx,
+        y:yy,
+        duration:1,
+    })
+})
+
+var image = document.querySelector(".imageContainer")
+image.addEventListener("mouseenter",function(event){
+    gsap.to("#cursor7",{
+        scale: 3,
+        backgroundColor:"rgba(255, 255, 255, 0.473)"
+    })
+})
+image.addEventListener("mouseleave",function(event){
+    gsap.to("#cursor7",{
+        scale: 1,
+        backgroundColor:"white"
+    })
+})
+
+var rain_time = gsap.timeline()
+
+rain_time.to(".drop",{
+    duration: 0.5,
+    y: "99.5vh",
+    opacity: 0,
+    ease: "linear",
+    stagger : 0.2,
+})
+
+rain_time.pause()
+
+var play = document.querySelector("#play")
+var pause = document.querySelector("#pause")
+play.addEventListener("click",function(){
+    rain_time.play()
+})
+pause.addEventListener("click",function(){
+    rain_time.pause()
+})
+var reverse = document.querySelector("#reverse")
+reverse.addEventListener("click",function(){
+    rain_time.reverse()
+})
+
+gsap.from(".timeline",{
+    duration:0.5,
+    left:"-20%",
+    ease: "bounce",
+    scrollTrigger: {
+        trigger: ".page8",
+        start: "top 40%",
+    }
 })
