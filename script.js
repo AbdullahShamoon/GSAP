@@ -157,10 +157,6 @@ string.addEventListener("mousemove", function (dets) {
     // Get the updated position of the element
     var pos = string.getBoundingClientRect();
 
-    // Log the dynamic values
-    console.log("Dets y: ", dets.clientY);
-    console.log("Pos top: ", pos.top);
-
     // Update the path dynamically
     path = `M 10 100 Q ${dets.clientX - pos.left} ${dets.clientY - pos.top} 990 100`;
     gsap.to("#string path", {
@@ -180,7 +176,6 @@ string.addEventListener("mouseleave", function () {
 
 gsap.from(".page5 .guitar span", {
     duration: 1,
-    y: -400,
     opacity: 0,
     ease: "bounce",
     stagger: 0.1,
@@ -189,4 +184,56 @@ gsap.from(".page5 .guitar span", {
         start: "top 60%",
         // markers: true
     }
+})
+
+var page6 = document.querySelector(".page6")
+page6.addEventListener("mousemove",function(event){
+    // Get the updated position of the element
+    var pos = page6.getBoundingClientRect();
+
+    xx=event.clientX-pos.left
+    yy=event.clientY-pos.top
+
+    gsap.to("#cursor1",{
+        x:xx,
+        y:yy,
+        duration:1,
+        
+    })
+    gsap.to("#cursor2",{
+        x:xx,
+        y:yy,
+        duration:0.9,
+        
+    })
+    gsap.to("#cursor3",{
+        x:xx,
+        y:yy,
+        duration:0.8,
+       
+    })
+    gsap.to("#cursor4",{
+        x:xx,
+        y:yy,
+        duration:0.7,
+        
+    })
+    gsap.to("#cursor5",{
+        x:xx,
+        y:yy,
+        duration:0.6,
+       
+    })
+    gsap.to("#cursor6",{
+        x:xx,
+        y:yy,
+        duration:0.5,
+        
+    })
+    gsap.to("#cursor7",{
+        x:xx,
+        y:yy,
+        duration:0.4,
+       
+    })
 })

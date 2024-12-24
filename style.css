@@ -172,10 +172,66 @@ body {
     text-align: center;
 }
 
-
-
 .guitar{
     color: white;
     font-size: 40px;
     text-align: center;
+}
+
+.cursorText{
+    color: white;
+    font-size: 40px;
+    left: 50%;
+    transform: translate(-50%,20px);
+    position: absolute;
+}
+
+#cursor7{
+    height: 32px;
+    width: 32px;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+}
+#cursor6{
+    height: 30px;
+    width: 30px;
+    background-color: rgb(221, 218, 218);
+    position: absolute;
+    border-radius: 50%;
+}
+#cursor5{
+    height: 28px;
+    width: 28px;
+    background-color: rgb(214, 213, 213);
+    position: absolute;
+    border-radius: 50%;
+}
+#cursor4{
+    height: 26px;
+    width: 26px;
+    background-color: rgb(168, 166, 166);
+    position: absolute;
+    border-radius: 50%;
+}
+#cursor3{
+    height: 24px;
+    width: 24px;
+    background-color: rgb(128, 125, 125);
+    position: absolute;
+    border-radius: 50%;
+}
+#cursor2{
+    height: 22px;
+    width: 22px;
+    background-color: rgb(87, 86, 86);
+    position: absolute;
+    border-radius: 50%;
+}
+#cursor1{
+    height: 20px;
+    width: 20px;
+    background-color: rgb(48, 46, 46);
+    position: absolute;
+    border-radius: 50%;
 }
