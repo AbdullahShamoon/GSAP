@@ -91,10 +91,23 @@ body {
 }
 
 .page5 {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     width: 100%;
-    background-color: rgb(2, 41, 41);
+    background-color: rgb(1, 15, 15);
 }
+
+.page6 {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+
 
 .box {
     width: 200px;
@@ -151,4 +164,18 @@ body {
     font-weight: 900;
     white-space: nowrap;
    
+}
+
+.text{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+
+
+.guitar{
+    color: white;
+    font-size: 40px;
+    text-align: center;
 }
