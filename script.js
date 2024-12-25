@@ -26,7 +26,7 @@ gsap.from(".code", {
     }
 })
 
-gsap.from(".text h1", {
+gsap.from(".text1 h1", {
     duration: 0.5,
     delay: 1,
     y: 20,
@@ -103,7 +103,7 @@ tl.from(".content h1", {
     opacity: 0,
     ease: "bounce",
     stagger: 0.1
-})
+},"-=0.5")  // -=0.5 means 0.5 second delay  ,, for timeline we have to do like this
 
 tl.from(".content h2", {
     duration: 1,
@@ -160,7 +160,7 @@ string.addEventListener("mousemove", function (dets) {
     // Update the path dynamically
     path = `M 10 100 Q ${dets.clientX - pos.left} ${dets.clientY - pos.top} 990 100`;
     gsap.to("#string path", {
-        attr: { d: path},
+        attr: { d: path },
         duration: 0.1,
         ease: "power3.out"
     });
@@ -187,114 +187,114 @@ gsap.from(".page5 .guitar span", {
 })
 
 var page6 = document.querySelector(".page6")
-page6.addEventListener("mousemove",function(event){
+page6.addEventListener("mousemove", function (event) {
     // Get the updated position of the element
     var pos = page6.getBoundingClientRect();
 
-    xx=event.clientX-pos.left
-    yy=event.clientY-pos.top
+    xx = event.clientX - pos.left
+    yy = event.clientY - pos.top
 
-    gsap.to("#cursor1",{
-        x:xx,
-        y:yy,
-        duration:1,
+    gsap.to("#cursor1", {
+        x: xx,
+        y: yy,
+        duration: 1,
     })
 
-    gsap.to("#cursor2",{
-        x:xx,
-        y:yy,
-        duration:0.9,
-        
+    gsap.to("#cursor2", {
+        x: xx,
+        y: yy,
+        duration: 0.9,
+
     })
-    gsap.to("#cursor3",{
-        x:xx,
-        y:yy,
-        duration:0.8,
-       
+    gsap.to("#cursor3", {
+        x: xx,
+        y: yy,
+        duration: 0.8,
+
     })
-    gsap.to("#cursor4",{
-        x:xx,
-        y:yy,
-        duration:0.7,
-        
+    gsap.to("#cursor4", {
+        x: xx,
+        y: yy,
+        duration: 0.7,
+
     })
-    gsap.to("#cursor5",{
-        x:xx,
-        y:yy,
-        duration:0.6,
-       
+    gsap.to("#cursor5", {
+        x: xx,
+        y: yy,
+        duration: 0.6,
+
     })
-    gsap.to("#cursor6",{
-        x:xx,
-        y:yy,
-        duration:0.5,
-        
+    gsap.to("#cursor6", {
+        x: xx,
+        y: yy,
+        duration: 0.5,
+
     })
-    gsap.to("#cursor7",{
-        x:xx,
-        y:yy,
-        duration:0.4,
-       
+    gsap.to("#cursor7", {
+        x: xx,
+        y: yy,
+        duration: 0.4,
+
     })
 })
 
 var page7 = document.querySelector(".page7")
-page7.addEventListener("mousemove",function(event){
+page7.addEventListener("mousemove", function (event) {
     // Get the updated position of the element
     var pos = page6.getBoundingClientRect();
 
-    xx=event.clientX-pos.left
-    yy=event.clientY-pos.top
+    xx = event.clientX - pos.left
+    yy = event.clientY - pos.top
 
-    gsap.to("#cursor7",{
-        x:xx,
-        y:yy,
-        duration:1,
+    gsap.to("#cursor7", {
+        x: xx,
+        y: yy,
+        duration: 1,
     })
 })
 
 var image = document.querySelector(".imageContainer")
-image.addEventListener("mouseenter",function(event){
-    gsap.to("#cursor7",{
+image.addEventListener("mouseenter", function (event) {
+    gsap.to("#cursor7", {
         scale: 3,
-        backgroundColor:"rgba(255, 255, 255, 0.473)"
+        backgroundColor: "rgba(255, 255, 255, 0.473)"
     })
 })
-image.addEventListener("mouseleave",function(event){
-    gsap.to("#cursor7",{
+image.addEventListener("mouseleave", function (event) {
+    gsap.to("#cursor7", {
         scale: 1,
-        backgroundColor:"white"
+        backgroundColor: "white"
     })
 })
 
 var rain_time = gsap.timeline()
 
-rain_time.to(".drop",{
+rain_time.to(".drop", {
     duration: 0.5,
     y: "95vh",
     opacity: 0,
     ease: "linear",
-    stagger : 0.2,
+    stagger: 0.2,
 })
 
 rain_time.pause()
 
 var play = document.querySelector("#play")
 var pause = document.querySelector("#pause")
-play.addEventListener("click",function(){
+play.addEventListener("click", function () {
     rain_time.play()
 })
-pause.addEventListener("click",function(){
+pause.addEventListener("click", function () {
     rain_time.pause()
 })
 var reverse = document.querySelector("#reverse")
-reverse.addEventListener("click",function(){
+reverse.addEventListener("click", function () {
     rain_time.reverse()
 })
 
-gsap.from(".timeline",{
-    duration:0.5,
-    left:"-20%",
+gsap.from(".timeline", {
+    duration: 0.5,
+    left: "-20%",
     ease: "bounce",
     scrollTrigger: {
         trigger: ".page8",
@@ -303,44 +303,128 @@ gsap.from(".timeline",{
 })
 
 var s = document.querySelector(".s")
-s.addEventListener("mouseover",function(){
-    gsap.to(".s",{
-        scale:1.5,
-        duration:0.5,
+s.addEventListener("mouseover", function () {
+    gsap.to(".s", {
+        scale: 1.5,
+        duration: 0.5,
         ease: "elastic.out(2,0.1)",
     })
 })
-s.addEventListener("mouseleave",function(){
-    gsap.to(".s",{
-        scale:1,
-        duration:0.5,
+s.addEventListener("mouseleave", function () {
+    gsap.to(".s", {
+        scale: 1,
+        duration: 0.5,
         ease: "linear",
     })
 })
 
 var m = document.querySelector(".m")
-m.addEventListener("mouseover",function(){
-    gsap.to(".m",{
-        scale:1.5,
-        duration:0.5,
+m.addEventListener("mouseover", function () {
+    gsap.to(".m", {
+        scale: 1.5,
+        duration: 0.5,
         ease: "elastic.out(2,0.1)",
     })
 })
-m.addEventListener("mouseleave",function(){
-    gsap.to(".m",{
-        scale:1,
-        duration:0.5,
+m.addEventListener("mouseleave", function () {
+    gsap.to(".m", {
+        scale: 1,
+        duration: 0.5,
         ease: "linear",
     })
 })
 
-gsap.from(".pagal",{
-    duration:6,
-    x:-750,
-    rotation:3600,
+gsap.from(".pagal", {
+    duration: 6,
+    x: -750,
+    rotation: 3600,
     ease: "bounce",
     scrollTrigger: {
         trigger: ".page9",
         start: "top 20%",
     }
 })
+
+function breakTheText() {
+    var content10 = document.querySelector("#content10")
+    var content10Text = content10.textContent
+
+    var splittedText = content10Text.split("")
+
+    // var clutter = ""
+
+    // splittedText.forEach(function(elem){
+    //     clutter += `<span>${elem}</span>`
+    // })
+    // content10.innerHTML = clutter
+
+    // OR
+
+    var fullValue = splittedText.length
+    var halfValue = Math.floor(splittedText.length / 2)
+
+    content10.textContent = ""
+
+    for (var i = 0; i < fullValue; i++) {
+
+        if (i < halfValue) {
+
+            var span = document.createElement("span")
+            span.textContent = splittedText[i]
+            span.classList.add("firstHalf")
+        }
+        else {
+            var span = document.createElement("span")
+            span.textContent = splittedText[i]
+            span.classList.add("secondHalf")
+        }
+
+        content10.appendChild(span)
+    }
+}
+
+breakTheText()
+
+gsap.from(".firstHalf", {
+    duration: 0.5,
+    y: 50,
+    opacity: 0,
+    opacity: 0,
+    stagger: 0.3,
+    scrollTrigger: {
+        trigger: ".page10",
+        start: "top 40%",
+    }
+})
+
+gsap.from(".secondHalf", {
+    duration: 0.5,
+    y: 50,
+    opacity: 0,
+    opacity: 0,
+    stagger: -0.3,
+    scrollTrigger: {
+        trigger: ".page10",
+        start: "top 40%",
+    }
+})
+
+var content10Span = document.querySelectorAll("#content10 span")
+for(var i=0; i<content10Span.length; i++){
+    content10Span[i].addEventListener("mouseover", function () {
+        gsap.to(content10Span, {
+            scale: 1.5,
+            duration: 0.7,
+            stagger: 0.2,
+        })
+    })
+    content10Span[i].addEventListener("mouseleave", function () {
+        gsap.to(content10Span, {
+            scale: 1,
+            duration: 0.7,
+            ease: "linear",
+            stagger: 0.2,
+    
+        })
+    })
+}
