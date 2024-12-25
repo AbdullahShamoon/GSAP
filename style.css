@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Prosto+One&display=swap');
+
 body {
     background-color: black;
     margin: 0;
@@ -121,6 +123,35 @@ body {
     width: 100%;
     background-color: rgb(0, 0, 0);
     position: relative;
+}
+
+.page9 {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top:1px solid white;
+}
+
+.shad{
+    display: flex;
+    gap: 30px;
+    color: #004dff;
+    font-size: 90px;
+    font-family: 'Mountains of Christmas', cursive;
+    font-weight: 900;
+    cursor: default;
+}
+
+.pagal{
+    cursor: default;
+    color: #00ff40;
+    font-size: 40px;
+    font-family: 'Mountains of Christmas', cursive;
+    font-weight: 900;
 }
 
 .box {
@@ -390,7 +421,7 @@ body {
     calc(var(--_i,-1)*-0.08em)  .01em 2px #0004;
   outline-offset: .1em;
   transition: 0.3s;
-  width: 150px;
+  width: 200px;
 }
 
 #play:hover,

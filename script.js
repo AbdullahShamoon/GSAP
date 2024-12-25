@@ -271,7 +271,7 @@ var rain_time = gsap.timeline()
 
 rain_time.to(".drop",{
     duration: 0.5,
-    y: "99.5vh",
+    y: "95vh",
     opacity: 0,
     ease: "linear",
     stagger : 0.2,
@@ -299,5 +299,48 @@ gsap.from(".timeline",{
     scrollTrigger: {
         trigger: ".page8",
         start: "top 40%",
+    }
+})
+
+var s = document.querySelector(".s")
+s.addEventListener("mouseover",function(){
+    gsap.to(".s",{
+        scale:1.5,
+        duration:0.5,
+        ease: "elastic.out(2,0.1)",
+    })
+})
+s.addEventListener("mouseleave",function(){
+    gsap.to(".s",{
+        scale:1,
+        duration:0.5,
+        ease: "linear",
+    })
+})
+
+var m = document.querySelector(".m")
+m.addEventListener("mouseover",function(){
+    gsap.to(".m",{
+        scale:1.5,
+        duration:0.5,
+        ease: "elastic.out(2,0.1)",
+    })
+})
+m.addEventListener("mouseleave",function(){
+    gsap.to(".m",{
+        scale:1,
+        duration:0.5,
+        ease: "linear",
+    })
+})
+
+gsap.from(".pagal",{
+    duration:6,
+    x:-750,
+    rotation:3600,
+    ease: "bounce",
+    scrollTrigger: {
+        trigger: ".page9",
+        start: "top 20%",
     }
 })
