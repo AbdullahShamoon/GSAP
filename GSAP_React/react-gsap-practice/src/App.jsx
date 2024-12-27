@@ -24,6 +24,7 @@ const App = () => {
         y:50,
         duration:5,
         rotateY: 700,
+        rotateZ: 700,
         scale: 2
       })
     });
