@@ -18,6 +18,22 @@ body {
     background-color: rgb(0, 0, 0);
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+.color {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("./image.png");
+    /* width: 10%;
+    height: 10%; */
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+   
+    
 }
 
 .navbar {
@@ -639,4 +655,28 @@ body {
 
 #content10 span {
     display: inline-block;
+}
+
+.page11 {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.catch{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 60px;
+    font-family: 'Mountains of Christmas', cursive;
+}
+
+.fly{
+    padding: 20px;
 }

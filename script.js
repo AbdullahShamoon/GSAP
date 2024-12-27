@@ -103,13 +103,21 @@ tl.from(".content h1", {
     opacity: 0,
     ease: "bounce",
     stagger: 0.1
-},"-=0.5")  // -=0.5 means 0.5 second delay  ,, for timeline we have to do like this
+}, "-=0.5")  // -=0.5 means 0.5 second delay  ,, for timeline we have to do like this
 
 tl.from(".content h2", {
     duration: 1,
     opacity: 0,
     y: 400,
     ease: "bounce",
+})
+
+tl.to(".color", {
+    duration: 1,
+    width: "100%",
+    height: "100%",
+    borderRadius: "0%",
+    ease: "none",
 })
 
 gsap.to(".page4 .pinned_text", {
@@ -410,7 +418,7 @@ gsap.from(".secondHalf", {
 })
 
 var content10Span = document.querySelectorAll("#content10 span")
-for(var i=0; i<content10Span.length; i++){
+for (var i = 0; i < content10Span.length; i++) {
     content10Span[i].addEventListener("mouseover", function () {
         gsap.to(content10Span, {
             scale: 1.5,
@@ -424,7 +432,23 @@ for(var i=0; i<content10Span.length; i++){
             duration: 0.7,
             ease: "linear",
             stagger: 0.2,
-    
+
         })
     })
 }
+
+
+var fly = document.querySelector(".fly")
+fly.addEventListener("mouseover", function (e) {
+
+    var randomX = Math.floor(gsap.utils.random(-600, 600))
+    var randomY = Math.floor(gsap.utils.random(-300, 300))
+    var randomRotation = Math.floor(gsap.utils.random(-360, 360))
+
+    gsap.to(".fly", {
+        x: randomX,
+        y: randomY,
+        rotation: randomRotation,
+        duration: 0.5,
+    })
+})
